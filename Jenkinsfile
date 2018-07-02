@@ -4,7 +4,7 @@ pipeline {
     stages  {
         stage ('Compile Stage')     {
             steps   {
-                withMaven(maven : 'mave3.5.0')  {
+                withMaven(maven : 'maven3.5.0')  {
                     sh 'clean install'
                     }
                 }
@@ -18,7 +18,7 @@ pipeline {
             }
             stage ('Deployement Stage') {
                 steps   {
-                    withMaven(maven : 'mave3.5.0')  {
+                    withMaven(maven : 'maven3.5.0')  {
                     sh 'mvn deploy'
                     }
                 }
